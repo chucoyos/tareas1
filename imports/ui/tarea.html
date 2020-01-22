@@ -1,0 +1,11 @@
+
+<template name="tarea">
+	<li class="{{#if checked}}checked{{/if}}">
+ 
+		<input type="checkbox" class="toggle-checked"
+		 checked="{{checked}}">
+		<span><strong>{{username}} </strong>{{tarea}}</span>
+		<button class="delete w3-btn">&times;</button>
+
+	</li>
+</template>

@@ -1,0 +1,26 @@
+
+<body class="w3-black">
+	<header class="w3-card w3-center">
+		<h1>Tareas {{incompleteCount}}</h1>
+
+		<label class="hide-completed">
+			<input type="checkbox" />
+			Ocultar Tareas Realizadas
+		</label>
+
+		  {{> loginButtons}}
+
+          {{#if currentUser}}
+		<form class="nueva-tarea">
+			<input type="text" name="tarea" placeholder="Ingrese Nueva Tarea">
+		</form>
+		{{/if}}
+	</header>
+       
+	<ul>
+		{{#each tareas}}
+		{{>tarea}}
+		{{/each}}
+	</ul>
+
+</body>
